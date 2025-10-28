@@ -10,7 +10,7 @@ def total_salary(path):
                     continue
                 
                 name, salary = cleaned_line.split(',') # розділяємо рядок на дві частини - ім'я та зарплату 
-                salaries[name] = int(salary)  # додаємо до словника перетворюючи зарплати в integer
+                salaries[name] = float(salary)  # додаємо до словника перетворюючи зарплати в integer
 
         
         total = sum(salaries.values()) # роозраховуємо загальну та середню суму зарплат
