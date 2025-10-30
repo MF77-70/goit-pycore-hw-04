@@ -11,12 +11,11 @@ def total_salary(path):
                 
                 name, salary = cleaned_line.split(',') # розділяємо рядок на дві частини - ім'я та зарплату 
                 salaries[name] = float(salary)  # додаємо до словника перетворюючи зарплати в integer
-
-        
+                
         total = sum(salaries.values()) # роозраховуємо загальну та середню суму зарплат
         average = total / len(salaries) 
 
-        return total, average, salaries
+        return total, average #, salaries
 
     except FileNotFoundError: # якщо файл не знайдено або інша помилка — повертаємо нулі замість помилки
         print("Файл відсутній")
@@ -27,10 +26,10 @@ def total_salary(path):
 
 
 # Перевірка
-total, average, salaries = total_salary('salary_file.txt')
+total, average = total_salary('salary_file.txt')
 
 print(f"Загальна сума заробітної плати: {total}, Середня: {average}")
 
-print(salaries)
-print (total, average, salaries)
+#print(salaries)
+print (total, average)
 
